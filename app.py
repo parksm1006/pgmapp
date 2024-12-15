@@ -22,7 +22,7 @@ else:
         os.system("sudo apt-get update")
         os.system("sudo apt-get install -y fonts-nanum")
         os.system("fc-cache -fv")
-    rc('font', family='NanumGothic')
+    rc('font', family='MalgunGothic')
 
 plt.rcParams['axes.unicode_minus'] =False
 
