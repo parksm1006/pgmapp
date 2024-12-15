@@ -11,13 +11,12 @@ import re
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
-from matplotlib import rc
 
 
 font_file = fm.findSystemFonts(fontpaths='./assets/fonts')
 fm._load_fontmanager(try_read_cache=False)
 fontname=[f.name for f in fm.fontManager.ttflist]
-rc('font', family=fontname)
+# rc('font', family=fontname)
 
 plt.rcParams['axes.unicode_minus'] =False
 
@@ -154,7 +153,7 @@ if st.session_state['form_submitted']:
                 width=800,
                 height=600
             ).generate_from_frequencies(word_freq)
-
+            plt.rc('font', family=fontname)
             plt.figure(figsize=(12, 8))
             plt.imshow(wordcloud, interpolation='bilinear')
             plt.axis('off')
