@@ -13,7 +13,7 @@ from matplotlib import rc
 from matplotlib import font_manager
 
 
-font_path = "./malgun.ttf"
+font_path = "./assets/fonts/malgun.ttf"
 font_name = font_manager.FontProperties(fname=font_path).get_name()
 rc('font', family=font_name)
 plt.rcParams['axes.unicode_minus'] =False
