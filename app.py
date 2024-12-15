@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 from matplotlib import rc
 
+print([f.name for f in fm.fontManager.ttflist if 'Nanum' in f.name])
 # Ubuntu 시스템 폰트 경로에 설치된 Nanum Gothic 설정
 rc('font', family='NanumGothic')
 
