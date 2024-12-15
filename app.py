@@ -15,7 +15,7 @@ import matplotlib.font_manager as fm
 
 font_file = fm.findSystemFonts(fontpaths='./assets/fonts')
 fm._load_fontmanager(try_read_cache=False)
-fontname=[f.name for f in fm.fontmanager.ttflist]
+fontname=[f.name for f in fm.fontManager.ttflist]
 rc('font', family=fontname)
 
 plt.rcParams['axes.unicode_minus'] =False
