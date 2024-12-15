@@ -2,6 +2,7 @@ import streamlit as st
 from xml.dom.minidom import parseString
 import pandas as pd
 import urllib.request
+import requests
 from collections import Counter
 import os
 import time
