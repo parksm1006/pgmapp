@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 from matplotlib import rc
 from matplotlib import font_manager
 
-matplotlib.font_manager._rebuild()
+
 
 url = "https://github.com/google/fonts/raw/main/ofl/nanumgothic/NanumGothic-Regular.ttf"
 response = requests.get(url)
@@ -25,6 +25,7 @@ with open("NanumGothic.ttf", "wb") as f:
 FONT_PATH = "NanumGothic.ttf"
 font_name = font_manager.FontProperties(fname=FONT_PATH).get_name()
 rc('font', family=font_name)
+matplotlib.font_manager._rebuild()
 
 plt.rcParams['axes.unicode_minus'] =False
 
