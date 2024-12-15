@@ -14,6 +14,9 @@ import matplotlib.font_manager as fm
 
 
 malgun = fm.FontProperties(fname='./assets/fonts/malgun.ttf')
+font_path='./assets/font/malgun.ttf'
+font_name=fm.FontProperties(fname=font_path).get_name()
+plt.rcParams['font.family']=font_name
 plt.rcParams['axes.unicode_minus'] =False
 
 #소개글
@@ -160,7 +163,7 @@ if st.session_state['form_submitted']:
             top_10_words=word_df.nlargest(10,'Count')
 
             plt.figure(figsize=(10,6))
-            plt.bar(top_10_words['Word'],top_10_words['Count'],color='orange', fontproperties=malgun)
+            plt.bar(top_10_words['Word'],top_10_words['Count'],color='orange')
             plt.xlabel('단어', fontproperties=malgun)
             plt.ylabel('총 갯수', fontproperties=malgun)
             plt.title("단어 총 갯수 top10", fontproperties=malgun)
