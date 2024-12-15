@@ -10,20 +10,14 @@ from konlpy.tag import Okt
 import re
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-from matplotlib import rc
-from matplotlib import font_manager
+import matplotlib.font_manager as fm
 
 
-url = "https://github.com/google/fonts/raw/main/ofl/nanumgothic/NanumGothic-Regular.ttf"
-response = requests.get(url)
-# 폰트 파일 저장
-with open("NanumGothic.ttf", "wb") as f:
-    f.write(response.content)
-
-# Matplotlib에 폰트 설정
-FONT_PATH = "NanumGothic.ttf"
-font_name = font_manager.FontProperties(fname=FONT_PATH).get_name()
-rc('font', family=font_name)
+font_dirs = './asssets/fonts'
+font_file = fm.findSystemFonts(fontpath=font_dirs)
+fm._load_fontmanager(try_read_cache=False)
+fontname=[f.name for f in fm.fontmanager.ttflist]
+rc('font', family=fontname)
 
 plt.rcParams['axes.unicode_minus'] =False
 
