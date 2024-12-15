@@ -11,6 +11,7 @@ import re
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
+from matplotlib import rc
 
 
 font_file = fm.findSystemFonts(fontpaths='./assets/fonts')
