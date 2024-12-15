@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 
 
-font_file = fm.findSystemFonts(fontpath='./assets/fonts')
+font_file = fm.findSystemFonts(fontpaths='./assets/fonts')
 fm._load_fontmanager(try_read_cache=False)
 fontname=[f.name for f in fm.fontmanager.ttflist]
 rc('font', family=fontname)
