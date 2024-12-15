@@ -160,7 +160,7 @@ if st.session_state['form_submitted']:
             top_10_words=word_df.nlargest(10,'Count')
 
             plt.figure(figsize=(10,6))
-            plt.bar(top_10_words['Word'],top_10_words['Count'],color='orange')
+            plt.bar(top_10_words['Word'],top_10_words['Count'],color='orange', fontproperties=malgun)
             plt.xlabel('단어', fontproperties=malgun)
             plt.ylabel('총 갯수', fontproperties=malgun)
             plt.title("단어 총 갯수 top10", fontproperties=malgun)
