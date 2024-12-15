@@ -12,6 +12,11 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 import matplotlib as mpl
 
+if not os.path.exists("/usr/share/fonts/truetype/nanum/NanumGothic.ttf"):
+    os.system("sudo apt-get update")
+    os.system("sudo apt-get install -y fonts-nanum")
+    os.system("fc-cache -fv")
+
 font_path = './malgun.ttf'
 font_name = fm.FontProperties(fname=font_path).get_name()
 plt.rc('font', family=font_name)
