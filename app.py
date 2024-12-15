@@ -13,6 +13,8 @@ import matplotlib.pyplot as plt
 from matplotlib import rc
 from matplotlib import font_manager
 
+matplotlib.font_manager._rebuild()
+
 url = "https://github.com/google/fonts/raw/main/ofl/nanumgothic/NanumGothic-Regular.ttf"
 response = requests.get(url)
 # 폰트 파일 저장
