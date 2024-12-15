@@ -142,7 +142,7 @@ if st.session_state['form_submitted']:
             word_freq = dict(zip(filtered_words['Word'], filtered_words['Count']))
 
             wordcloud = WordCloud(
-                font_path='C:/Windows/Fonts/malgun.ttf',  # 한글 폰트 경로
+                font_path='malgun.ttf',  # 한글 폰트 경로
                 background_color='white',
                 width=800,
                 height=600
