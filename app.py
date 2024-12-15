@@ -153,7 +153,7 @@ if st.session_state['form_submitted']:
             plt.figure(figsize=(12, 8))
             plt.imshow(wordcloud, interpolation='bilinear')
             plt.axis('off')
-            plt.title('워드 클라우드',fontproperties=malgun)
+            plt.title('워드 클라우드', fontproperties=malgun)
             st.pyplot(plt)
 
         if submit_button and "단어 총 갯수 top10" in options:
@@ -161,9 +161,9 @@ if st.session_state['form_submitted']:
 
             plt.figure(figsize=(10,6))
             plt.bar(top_10_words['Word'],top_10_words['Count'],color='orange')
-            plt.xlabel('단어')
-            plt.ylabel('총 갯수')
-            plt.title("단어 총 갯수 top10")
+            plt.xlabel('단어', fontproperties=malgun)
+            plt.ylabel('총 갯수', fontproperties=malgun)
+            plt.title("단어 총 갯수 top10", fontproperties=malgun)
             plt.xticks(rotation=45)
             st.pyplot(plt)
 
@@ -192,9 +192,9 @@ if st.session_state['form_submitted']:
                 word_data = data_df[data_df['Word'] == word]
                 plt.plot(word_data['Date'], word_data['Frequency'], label=word)
 
-            plt.xlabel('날짜')
-            plt.ylabel('빈도')
-            plt.title('날짜별 단어 빈도')
+            plt.xlabel('날짜', fontproperties=malgun)
+            plt.ylabel('빈도', fontproperties=malgun)
+            plt.title('날짜별 단어 빈도', fontproperties=malgun)
             plt.legend()
             plt.grid(True)
             st.pyplot(plt)
@@ -229,9 +229,9 @@ if st.session_state['form_submitted']:
                 word_data = data_df[data_df['Word'] == word]
                 plt.plot(word_data['Time_h'], word_data['Frequency'], label=word)
 
-            plt.xlabel('시간')
-            plt.ylabel('빈도')
-            plt.title('시간별 단어 빈도')
+            plt.xlabel('시간', fontproperties=malgun)
+            plt.ylabel('빈도', fontproperties=malgun)
+            plt.title('시간별 단어 빈도', fontproperties=malgun)
             plt.legend()
             plt.grid(True)
             st.pyplot(plt)
