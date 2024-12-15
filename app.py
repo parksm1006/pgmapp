@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 
 
-malgun = fm.FontProperties(fname='/assets/fonts/malgun.ttf')
+malgun = fm.FontProperties(fname='./assets/fonts/malgun.ttf')
 plt.rcParams['axes.unicode_minus'] =False
 
 #소개글
