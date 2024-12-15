@@ -9,9 +9,12 @@ from konlpy.tag import Okt
 import re
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+import matplotlib as mpl
 
-
-plt.rcParams['font.family'] ='Malgun Gothic'
+font_path = 'malgun.ttf'
+font_name = fm.FontProperties(fname=font_path).get_name()
+plt.rc('font', family=font_name)
 plt.rcParams['axes.unicode_minus'] =False
 
 #소개글
