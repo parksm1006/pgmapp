@@ -13,11 +13,7 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 
 
-font_file = fm.findSystemFonts(fontpaths='./assets/fonts')
-fm._load_fontmanager(try_read_cache=False)
-fontname=[f.name for f in fm.fontManager.ttflist]
-# rc('font', family=fontname)
-
+malgun = fm.FontProperties(fname='/assets/fonts/malgun.ttf')
 plt.rcParams['axes.unicode_minus'] =False
 
 #소개글
@@ -153,11 +149,11 @@ if st.session_state['form_submitted']:
                 width=800,
                 height=600
             ).generate_from_frequencies(word_freq)
-            plt.rc('font', family=fontname)
+            
             plt.figure(figsize=(12, 8))
             plt.imshow(wordcloud, interpolation='bilinear')
             plt.axis('off')
-            plt.title('워드 클라우드')
+            plt.title('워드 클라우드',fontproperties=malgun)
             st.pyplot(plt)
 
         if submit_button and "단어 총 갯수 top10" in options:
