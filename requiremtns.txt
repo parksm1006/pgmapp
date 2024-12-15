@@ -4,6 +4,7 @@ streamlit==1.24.0
 pandas==1.3.4
 matplotlib==3.4.3
 konlpy==0.4.1
+python-okt-ko
 urllib
 os
 time
