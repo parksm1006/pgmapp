@@ -1,0 +1,13 @@
+JPype1==1.3.0
+numpy==1.21.6
+streamlit==1.24.0
+pandas==1.3.4
+matplotlib==3.4.3
+konlpy==0.4.1
+urllib
+os
+time
+re
+wordcloud
+collections
+xml
