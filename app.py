@@ -14,7 +14,7 @@ import matplotlib.font_manager as fm
 
 
 malgun = fm.FontProperties(fname='./assets/fonts/malgun.ttf')
-font_path='./assets/font/malgun.ttf'
+font_path='./assets/fonts/malgun.ttf'
 font_name=fm.FontProperties(fname=font_path).get_name()
 plt.rcParams['font.family']=font_name
 plt.rcParams['axes.unicode_minus'] =False
