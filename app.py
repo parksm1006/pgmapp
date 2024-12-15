@@ -12,10 +12,17 @@ import matplotlib.pyplot as plt
 from matplotlib import rc
 from matplotlib import font_manager
 
+url = "https://github.com/google/fonts/raw/main/ofl/nanumgothic/NanumGothic-Regular.ttf"
+response = requests.get(url)
+# 폰트 파일 저장
+with open("NanumGothic.ttf", "wb") as f:
+    f.write(response.content)
 
-font_path = "./assets/fonts/malgun.ttf"
-font_name = font_manager.FontProperties(fname=font_path).get_name()
+# Matplotlib에 폰트 설정
+FONT_PATH = "NanumGothic.ttf"
+font_name = font_manager.FontProperties(fname=FONT_PATH).get_name()
 rc('font', family=font_name)
+
 plt.rcParams['axes.unicode_minus'] =False
 
 #소개글
