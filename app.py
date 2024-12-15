@@ -10,6 +10,7 @@ import re
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from matplotlib import rc
+import platform
 
 # 한글 폰트 설정
 if platform.system() == 'Windows':
