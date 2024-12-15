@@ -10,20 +10,12 @@ import re
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from matplotlib import rc
-import platform
+from matplotlib import font_manager
 
-# 한글 폰트 설정
-if platform.system() == 'Windows':
-    rc('font', family='Malgun Gothic')
-elif platform.system() == 'Darwin':
-    rc('font', family='AppleGothic')
-else:
-    if not os.path.exists("/usr/share/fonts/truetype/nanum/NanumGothic.ttf"):
-        os.system("sudo apt-get update")
-        os.system("sudo apt-get install -y fonts-nanum")
-        os.system("fc-cache -fv")
-    rc('font', family='Malgun Gothic')
 
+font_path = "./malgun.ttf"
+font_name = font_manager.FontProperties(fname=font_path).get_name()
+rc('font', family=font_name)
 plt.rcParams['axes.unicode_minus'] =False
 
 #소개글
