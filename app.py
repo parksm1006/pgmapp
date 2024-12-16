@@ -243,3 +243,4 @@ if st.session_state['form_submitted']:
             plt.grid(True)
             st.pyplot(plt)
             st.caption("시간별 단어 빈도는 기사가 가장 많이 올라온 날을 기준으로 하고 있습니다.")
+            st.caption(f"입력하신 주제에 대한 기사가 가장 많이 올라온 날은 {most_common_date}입니다.")
