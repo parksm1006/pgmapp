@@ -135,6 +135,7 @@ if st.session_state['form_submitted'] and st.session_state['df'] is not None:
     
 if st.session_state['form_submitted']:
     with st.form('visualization'):
+        st.caption("활용하는 기사 데이터는 최신기사 1000개를 기준으로 하고 있기 때문에 최근 하루 이틀 사이 1000개가 넘는 기사가 올라온 경우에는 시각화 결과에 이상이 있을 수 있습니다.")
         options=st.multiselect(
             "시각화 할 방법을 선택하세요",
             ["워드클라우드","단어 총 갯수 top10","날짜별 단어 빈도","시간별 단어 빈도"],
@@ -143,8 +144,7 @@ if st.session_state['form_submitted']:
         submit_button = st.form_submit_button('시각화')
         word_df = pd.read_excel('word_count.xlsx')
         top_words = word_df[word_df['Count'] >= 5].nlargest(5, 'Count')['Word'].tolist()
-        if submit_button:
-            st.caption("활용하는 기사 데이터는 최신기사 1000개를 기준으로 하고 있기 때문에 최근 하루 이틀 사이 1000개가 넘는 기사가 올라온 경우에는 시각화 결과에 이상이 있을 수 있습니다.")
+            
         if submit_button and "워드클라우드" in options:
             
 
