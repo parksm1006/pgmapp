@@ -39,7 +39,7 @@ client_id=st.secrets['api_keys']['client_id']
 client_secret=st.secrets['api_keys']['client_secret']
 
 if "form_submitted" not in st.session_state:
-    st.session_state['form_submitted']='False'
+    st.session_state['form_submitted']=False
 if "df" not in st.session_state:
     st.session_state['df']=None
 
